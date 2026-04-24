@@ -19,7 +19,7 @@ model Book {
   pages     Int
   price     Int      
   inStock   Int      @default(0)
-  version   Int      @default(0) 
+  version   Int     @default(0) 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

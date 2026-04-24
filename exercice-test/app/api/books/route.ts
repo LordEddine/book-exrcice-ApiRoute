@@ -87,11 +87,4 @@ export async function POST(req: Request){
 
 
 
-// localhost:3000/api/book/[id]
-export async function DELETE(req:Request, { params }: number ){
 
-  // 1 . Valider le parametre (ID) : que c'est un cuid (Syntaxe)
-  // 2 . Verifier si le livre existe (monlivre = await prisma.book.findUnique) 
-  // 3 . Suppression (await prisma.book.delete)
-
-}

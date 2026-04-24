@@ -21,3 +21,7 @@ export const bookCreateSchema = z.object({
 export type BookCreateInput = z.infer<typeof bookCreateSchema>
 
 export const bookIdSchema = z.string().min(25).max(25).regex(/^c[a-z0-9]+$/,"ID Invalide")
+
+export const bookUpdateSchema = bookCreateSchema.partial().extend({
+    version: z.coerce.number().int().nonnegative(),
+})
